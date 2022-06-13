@@ -2,6 +2,15 @@
 
 @section('content')
 <div class="container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -13,12 +22,12 @@
                             <div class="scroll-y me-n7 pe-7">
                                 <div class="fv-row mb-7">
                                     <label class="required fw-bold fs-6 mb-2">{{__('First Name')}}</label>
-                                    <input type="text" class="form-control form-control-solid mb-3 mb-lg-0" name="firstName" placeholder="{{__('First Name')}}" required>
+                                    <input type="text" class="form-control form-control-solid mb-3 mb-lg-0" name="firstName" placeholder="{{__('First Name')}}">
                                 </div>
 
                                 <div class="fv-row mb-7">
                                     <label class="required fw-bold fs-6 mb-2">{{__('Last Name')}}</label>
-                                    <input type="text" class="form-control form-control-solid mb-3 mb-lg-0" name="lastName" placeholder="{{__('Last Name')}}" required>
+                                    <input type="text" class="form-control form-control-solid mb-3 mb-lg-0" name="lastName" placeholder="{{__('Last Name')}}">
                                 </div>
 
                                 <div class="fv-row mb-7">

@@ -2,11 +2,19 @@
 
 @section('content')
 <div class="container">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Company Create') }}</div>
-                    {!! Form::open(['route' => ['companies.store'], 'method' => 'POST', 'files' => true, 'id' => 'companies_form']) !!}
                     <form action="{{route('companies.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
@@ -14,7 +22,7 @@
                                 <div class="scroll-y me-n7 pe-7">
                                     <div class="fv-row mb-7">
                                         <label class="required fw-bold fs-6 mb-2">{{__('Name')}}</label>
-                                        <input type="text" class="form-control form-control-solid mb-3 mb-lg-0" name="name" placeholder="{{__('Name')}}" required>
+                                        <input type="text" class="form-control form-control-solid mb-3 mb-lg-0" name="name" placeholder="{{__('Name')}}">
                                     </div>
 
                                     <div class="fv-row mb-7">

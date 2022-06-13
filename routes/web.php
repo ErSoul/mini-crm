@@ -16,7 +16,9 @@ use App\Http\Controllers\{CompanyController, EmployeeController};
 */
     
 Route::get('/', function () {
-    return view('auth.login');
+    return auth()->check() ?
+    view('home') :
+    view('auth.login');
 });
 
 Route::get('/localization', function() {

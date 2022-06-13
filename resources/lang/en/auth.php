@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => session('lang') === 'es' ? 'Usuario o contraseña incorrecto.' : 'These credentials do not match our records3.', 
+    'failed' => session('lang') === 'es' ? 'Usuario o contraseña incorrecto.' : 'These credentials do not match our records.', 
     'password' => session('lang') === 'es' ? 'La contraseña proporcionada es incorrecta' : 'The provided password is incorrect.',
     'throttle' => session('lang') === 'es' ? 'Demasiados intentos de inicio de sesión. Vuelva a intentarlo en :segundos segundos.' : 'Too many login attempts. Please try again in :seconds seconds.'
 

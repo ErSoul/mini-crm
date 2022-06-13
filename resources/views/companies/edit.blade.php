@@ -23,7 +23,7 @@
                                 <div class="scroll-y me-n7 pe-7">
                                     <div class="fv-row mb-7">
                                         <label class="required fw-bold fs-6 mb-2">{{__('Name')}}</label>
-                                        <input type="text" class="form-control form-control-solid mb-3 mb-lg-0" name="name" placeholder="{{__('Name')}}" required value="{{$company->name}}">
+                                        <input type="text" class="form-control form-control-solid mb-3 mb-lg-0" name="name" placeholder="{{__('Name')}}" value="{{$company->name}}">
                                     </div>
 
                                     <div class="fv-row mb-7">
