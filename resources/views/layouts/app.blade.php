@@ -53,6 +53,10 @@
                             </a>
                         @endguest
                     </ul>
+
+                    @if(Auth::check())
+                        <x-quotes />
+                    @endif
                    
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

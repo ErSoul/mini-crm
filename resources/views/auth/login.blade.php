@@ -48,6 +48,10 @@
                         </div>
                     </form>
                 </div>
+
+                <div class="card-footer">
+                    <x-quotes />
+                </div>
             </div>
         </div>
     </div>
